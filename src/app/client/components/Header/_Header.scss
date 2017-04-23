@@ -1,0 +1,36 @@
+.header-login {
+  text-align: right;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+.header-login-button {
+  display: inline-block;
+  border: 0px;
+  color: white;
+  background-color: #F97056;  /* $color-orange */
+  height: 40px;
+  padding-left:10px;
+  padding-right: 10px;
+}
+
+@media (max-width : 360px) {
+  .logo {
+    margin: 0;
+    float: left;
+  }
+  .logo-image {
+    max-height: 50px;
+  }
+  .header {
+    background-color: white;
+  }
+}
+@media (min-width : 360px) {
+  .logo {
+    display: none;
+  }
+  .header {
+    background-color: #304FFE; /* $color-blue */
+  }
+}

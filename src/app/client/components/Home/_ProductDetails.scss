@@ -1,0 +1,32 @@
+.product-details {
+  width: 100%;
+  text-align: center;
+  color: black;
+  display: inline-block;
+  padding-bottom: 50px;
+}
+.product-details h3 {
+  color: #304FFE; /* $color-blue */
+}
+
+.product-details-container {
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width : 360px) {
+
+}
+@media (min-width : 360px) {
+  .product-details-left{
+    display: inline-block;
+    text-align: left;
+    width: 300px;
+  }
+  .product-details-right{
+    display: inline;
+    text-align: left;
+    padding-top: 50px;
+  }
+}

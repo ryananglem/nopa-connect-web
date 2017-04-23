@@ -1,0 +1,38 @@
+.get-started {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: #304FFE;  /* $color-blue; */
+}
+
+.get-started-actions {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  background-color: #304FFE;   /* $color-blue; */
+}
+
+.get-started-button {
+  font-size: 18px;
+  color: white;
+  background-color: #F97056; /* $color-orange */
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border :0px;
+  width: 245px;
+}
+
+@media (max-width : 360px) {
+  .pagelogo {
+    display: none;
+  }
+}
+@media (min-width : 360px) {
+  .pagelogo {
+    margin: 0;
+    display:inline-block;
+  }
+  .pagelogo-image {
+    max-height: 50px;
+  }
+
+}

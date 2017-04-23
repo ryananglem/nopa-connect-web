@@ -1,0 +1,38 @@
+.container {
+  padding: 0em;
+}
+
+.main-content {
+  color: aliceblue;
+  font-family: Montserrat;
+}
+
+.button {
+  font-size: 17px;
+}
+.blue {
+  background-color: #304FFE;
+}
+.light-blue {
+  background-color: #2ABBF0;
+}
+.orange {
+  background-color: #F97056;
+}
+.dark-blue {
+  background-color: #1D32A4;
+}
+@media (max-width : 360px) {
+  .partner-section {
+    display: none;
+  }
+}
+@media (min-width : 360px) {
+  .partner-section {
+    display: block;
+  }
+
+}
+
+
+
