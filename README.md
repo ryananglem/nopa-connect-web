@@ -1,8 +1,37 @@
 # Zopa's React JS technical test.
 
 ## Description
-This is a biolerplate for Zopa's React JS technical test.
+This is an implementation of Zopa's React JS technical test.
 
+The test is nearly complete with the following exceptions:
+
+- the logo on the front page is not positioned correctly on desktop resolution
+- the responsiveness for the statement page does not match the mockups
+- there is no testing (for examples of testing that I've done, please have a look at this repo https://github.com/ryananglem/london-bike-maps)
+- there are no environment settings for the service url
+
+I'll add these to the repo over the coming days
+
+## Some notes
+
+This is a great test! One of the best I've done. It was fun working on it!
+
+The test does not initially work on windows. This caused quite a bit of confusion
+as the "how to run?" instructions simply do not work
+ 
+The test took me quite a long time to complete. It might be helpful to mention 
+the extent of the work (ie you may need to obtain assets from the internet, 
+change build tool settings et al).  
+
+I've had no experience with sass - so there was a bit of a learning curve with
+that, and after a stage - I realised I'd not done it correctly. As facebook do 
+not recommend using a css pre-processor with react I have not looked into 
+doing it this way before, and so was a little torn between doing it this way 
+(from the template provided) and the component, post processing route I'm used to. 
+In the end I regret to not really doing either.
+
+
+## Resources
 Please refer to the wiki pages for the details:
 
 Description: https://github.com/ishabo/nopa-connect/wiki
@@ -11,13 +40,6 @@ Screens: https://github.com/ishabo/nopa-connect/wiki/Screens
 
 Style guide: https://github.com/ishabo/nopa-connect/wiki/Style-guide
 
-## What's included?
-This boilerplate contains a skeleton routes and the needed images for the test.
-There is basic configuration for react, react-routes, express, react-redux, sass-loader, jest and other libs. (check package.json)
-
-There's also a simple structure for client, server and static code. The majority of the work you need to do is under src/app/client and src/app/static/stylesheets.
-
-Feel free to use the current structure or change it as you wish. 
 
 ## How to run?
 
