@@ -1,13 +1,19 @@
-/*
+import expect from 'expect';
 import React from 'react';
+import {mount, shallow} from 'enzyme';
+
 import ChooseBankPage from './ChooseBankPage';
-import renderer from 'react-test-renderer';
 
-test('Renders correctly', () => {
-  const tree = renderer.create(
-    <ChooseBankPage />
-  ).toJSON();
+describe('Choose Bank Page', () => {
+  it('should render correctly', () => {
+/*
+    const props = {
+      chooseBank: () => {},
+      selectBank: () => {}
+    }
+    const chooseBank = shallow(<ChooseBankPage { ...props} />);
+ */
+  });
+})
 
-  expect(tree).toMatchSnapshot();
-});
-*/
+

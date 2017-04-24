@@ -1,8 +1,7 @@
 import expect from 'expect'
 import React from 'react';
 import LoginPage from './LoginPage';
-//import renderer from 'react-test-renderer';
-import TestUtils from 'react-addons-test-utils';
+
 
 describe('login page', () => {
   it('Renders correctly', () => {

@@ -11,6 +11,11 @@
     "test": "jest",
     "test:watch": "npm run test -- --watch"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "../../../static/fileMock.js"
+    }
+  },
   "author": "Issa Shabo <issa.shabo@zopa.com>",
   "dependencies": {
     "babel-polyfill": "6.8.0",
@@ -42,7 +47,7 @@
     "babel-register": "6.8.0",
     "colors": "1.1.2",
     "css-loader": "^0.27.3",
-    "enzyme": "^2.7.1",
+    "enzyme": "^2.8.2",
     "eslint": "2.9.0",
     "eslint-plugin-import": "1.6.1",
     "eslint-plugin-react": "5.0.1",
@@ -59,6 +64,7 @@
     "react-addons-test-utils": "^15.0.2",
     "react-test-renderer": "^15.4.2",
     "redux-immutable-state-invariant": "1.2.3",
+    "redux-mock-store": "^1.2.3",
     "sass-loader": "^6.0.3",
     "url-loader": "^0.5.8",
     "webpack": "^1.13.0",

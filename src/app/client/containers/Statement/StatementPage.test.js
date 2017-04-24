@@ -1,13 +1,11 @@
-/*
+import expect from 'expect'
 import React from 'react';
 import StatementPage from './StatementPage';
-import renderer from 'react-test-renderer';
 
-test('Renders correctly', () => {
-  const tree = renderer.create(
-    <StatementPage />
-  ).toJSON();
+describe('statement page', () => {
+  it('Renders correctly', () => {
 
-  expect(tree).toMatchSnapshot();
-});
-*/
+
+
+  });
+})

@@ -1,12 +1,16 @@
-/*import React from 'react';
-import ErrorPage from './ErrorPage';
-import renderer from 'react-test-renderer';
+import expect from 'expect'
+import React from 'react';
+import HomePage from './ErrorPage';
 
-test('Renders correctly', () => {
-  const tree = renderer.create(
-    <ErrorPage route={{ error: '404' }} />
-  ).toJSON();
+describe('error page', () => {
+  it('Renders correctly', () => {
 
-  expect(tree).toMatchSnapshot();
-});
-*/
+    //let renderer = TestUtils.createRenderer();
+    //renderer.render(<HomePage {...props} />);
+    // const tree = renderer.create(
+    //  <HomePage />
+    //).toJSON();
+
+    //expect(tree).toMatchSnapshot();
+  });
+})

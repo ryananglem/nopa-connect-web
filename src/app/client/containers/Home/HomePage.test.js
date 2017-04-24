@@ -1,18 +1,14 @@
-import expect from 'expect'
 import React from 'react';
 import HomePage from './HomePage';
-//import renderer from 'react-test-renderer';
-import TestUtils from 'react-addons-test-utils';
+import {mount, shallow} from 'enzyme';
 
 describe('home page', () => {
   it('Renders correctly', () => {
+    const props = {
 
-    //let renderer = TestUtils.createRenderer();
-    //renderer.render(<HomePage {...props} />);
-    // const tree = renderer.create(
-    //  <HomePage />
-    //).toJSON();
+    };
 
-    //expect(tree).toMatchSnapshot();
+    const wrapper = shallow(<HomePage {...props}/>);
+
   });
   })
