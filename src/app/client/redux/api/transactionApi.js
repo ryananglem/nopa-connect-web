@@ -9,14 +9,6 @@ export const getTransactionData = () => {
         return response;
       }).then( (data) => {
         return data.transactions;
-        /*
-        const returnValue = data.transactions.map(transaction=> {
-          return ({
-
-          })
-        } );
-        return returnValue;
-        */
       })
     ))
   })

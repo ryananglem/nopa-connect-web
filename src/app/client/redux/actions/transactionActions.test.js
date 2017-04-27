@@ -1,13 +1,10 @@
-import jest from 'jest'
-
 import * as types from './actionTypes';
 import expect from 'expect';
 import { requestTransactions, receiveTransactions, getTransactions } from './transactionActions';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
-import { getTransactionData } from '../api/transactionApi'
-
+jest.mock('../api/transactionApi', () => ({ getTransactionData: jest.fn() }))
 
 describe('transaction actions', () => {
 
@@ -35,45 +32,36 @@ describe('transaction actions', () => {
     expect(receiveTransactions(transactions)).toEqual(expectedAction);
   });
 
-
-  /*
   it('should get transaction data from api', () => {
 
     const expectedActions = [
       {type: types.GET_TRANSACTIONS_REQUEST, isFetching: true},
-      {type: types.GET_TRANSACTIONS_SUCCESS, transactions: transactions, isFetching: false}
+      {type: types.GET_TRANSACTIONS_SUCCESS, transactions: transactions.transactions, isFetching: false}
     ];
 
-    //jest.require('../api/transactionApi');
-    //getTransactionData().returnValue(transactions);
-
-    //console.log(transMock)
-    //transMock.getTransactionData()
-    //  .mockReturnValueOnce(transactions)
-    //  .mockReturnValue(true);
+    const transMock = require('../api/transactionApi').getTransactionData.mockImplementation(() => Promise.resolve(transactions.transactions))
 
     const store = mockStore({ transactions: [] });
-
 
     return store.dispatch(getTransactions())
       .then(() => { // return of async actions
         expect(store.getActions()).toEqual(expectedActions)
       });
   });
-  */
+
   const transactions = {
     "transactions": [
       {
         "id": 1,
         "dateStr": "Now",
         "beneficary": "PAYPAL ZARA",
-        "value": "- £35.98"
+        "value": "- 35.98"
       },
       {
         "id": 2,
         "dateStr": "Now",
         "beneficary": "HOUSE OF FRASER",
-        "value": "- £35.98"
+        "value": "- 35.98"
       }
     ]
   };
