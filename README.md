@@ -7,7 +7,7 @@ The test is nearly complete with the following exceptions:
 
 - the logo on the front page is not positioned correctly on desktop resolution
 - the responsiveness for the statement page does not match the mockups
-- there is no testing (for examples of testing that I've done, please have a look at this repo https://github.com/ryananglem/london-bike-maps)
+- the test coverage is not as good as it could be
 - there are no environment settings for the service url
 
 I'll add these to the repo over the coming days

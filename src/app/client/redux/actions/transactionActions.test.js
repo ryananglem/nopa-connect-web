@@ -4,7 +4,7 @@ import { requestTransactions, receiveTransactions, getTransactions } from './tra
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 
-jest.mock('../api/transactionApi', () => ({ getTransactionData: jest.fn() }))
+jest.mock('../api/transactionApi')
 
 describe('transaction actions', () => {
 
@@ -40,6 +40,23 @@ describe('transaction actions', () => {
     ];
 
     const transMock = require('../api/transactionApi').getTransactionData.mockImplementation(() => Promise.resolve(transactions.transactions))
+
+    const store = mockStore({ transactions: [] });
+
+    return store.dispatch(getTransactions())
+      .then(() => { // return of async actions
+        expect(store.getActions()).toEqual(expectedActions)
+      });
+  });
+
+  it('should handle error getting transaction data from api', () => {
+
+    const expectedActions = [
+      {type: types.GET_TRANSACTIONS_REQUEST, isFetching: true},
+      {type: types.GET_TRANSACTIONS_ERROR, isFetching: false}
+    ];
+
+    const transMock = require('../api/transactionApi').getTransactionData.mockImplementation(() => Promise.reject({ message: 'error'}))
 
     const store = mockStore({ transactions: [] });
 
