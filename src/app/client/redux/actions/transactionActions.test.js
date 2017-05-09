@@ -39,7 +39,8 @@ describe('transaction actions', () => {
       {type: types.GET_TRANSACTIONS_SUCCESS, transactions: transactions.transactions, isFetching: false}
     ];
 
-    const transMock = require('../api/transactionApi').getTransactionData.mockImplementation(() => Promise.resolve(transactions.transactions))
+
+    const transMock = require('../api/transactionApi').getTransactionData.mockReturnValue(Promise.resolve(transactions.transactions))
 
     const store = mockStore({ transactions: [] });
 
@@ -56,8 +57,7 @@ describe('transaction actions', () => {
       {type: types.GET_TRANSACTIONS_ERROR, isFetching: false}
     ];
 
-    const transMock = require('../api/transactionApi').getTransactionData.mockImplementation(() => Promise.reject({ message: 'error'}))
-
+    const transMock = require('../api/transactionApi').getTransactionData.mockReturnValue(Promise.reject({ message: 'error'}))
     const store = mockStore({ transactions: [] });
 
     return store.dispatch(getTransactions())

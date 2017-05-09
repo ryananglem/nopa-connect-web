@@ -9,7 +9,8 @@
     "lint": "node_modules/.bin/esw webpack.config.* app",
     "lint:watch": "npm run lint -- --watch",
     "test": "jest",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+	"build": ""
   },
   "jest": {
     "moduleNameMapper": {
